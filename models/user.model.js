@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema(
       unique: true,
       trim: true,
       lowercase: true,
-      match: [/\S+@\s+\.\s+/, "Please provide a valid email address"],
+      match: [/^\S+@\S+\.\S+$/, "Please provide a valid email address"],
     },
     password: {
       type: String,
@@ -26,5 +26,5 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const User = mongoose.Model("User", userSchema);
+const User = mongoose.model("User", userSchema);
 export default User;
