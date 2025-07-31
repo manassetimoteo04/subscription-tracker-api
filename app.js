@@ -21,7 +21,7 @@ app.get("/", (req, res) =>
   res.send({ message: "Hello from the Subscriptions tracker server" })
 );
 app.listen(PORT, async () => {
-  console.log(`"Subscription tracker API running on http://localhost:${PORT}`);
+  console.log(`Subscription tracker API running on http://localhost:${PORT}`);
   await connectToDatabase();
 });
 
